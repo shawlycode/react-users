@@ -7,19 +7,14 @@ class App extends Component {
     this.state = {
       users: [
       {
-        name: "",
-        email: "",
-        gen: "",
+        name: "orlando",
+        email: "orlandoshawly@gmail.com",
+        gen: "18",
       },
       {
-        name: "",
-        email: "",
-        gen: "",
-      },
-      {
-        name: "",
-        email: "",
-        gen: "",
+        name: "Micky",
+        email: "micky@gmail.com",
+        gen: "25",
       },
     ]};
   };
@@ -28,12 +23,11 @@ class App extends Component {
   render() {
     const users = this.state.users.map((user, index) => {
       return(
-        <User users={user} index={index} />       
+        <User user={user} index={index} />       
       )
     })
     return (
       <div>
-        <User />
         {users}
       </div>
     );
