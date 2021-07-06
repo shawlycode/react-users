@@ -1,23 +1,19 @@
 import React, { Component } from "react";
 import User from "./Component/User";
+import UserForm from "./Component/UserForm";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [
-      {
-        name: "orlando",
-        email: "orlandoshawly@gmail.com",
-        gen: "18",
-      },
-      {
-        name: "Micky",
-        email: "micky@gmail.com",
-        gen: "25",
-      },
-    ]};
-  };
+      users: []
+    }
+  }
+  handleAddNewUser = (newUser) => {
+    this.setState({
+      users:[...this.state.users, newUser ]
+    })
+  }
 
   
   render() {
@@ -28,7 +24,9 @@ class App extends Component {
     })
     return (
       <div>
+         <UserForm addNewUser={this.handleAddNewUser}/>
         {users}
+       
       </div>
     );
   }
