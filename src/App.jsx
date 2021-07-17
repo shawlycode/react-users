@@ -16,10 +16,15 @@ class App extends Component {
     });
   };
 
+
   render() {
-    const users = this.state.users.map((user, index) => {
-      return <User user={user} index={index} />;
-    });
+    const users = this.state.users.map((user ,index) =>{
+      return(
+        <User user={user} index={index}/>
+      )
+    })
+
+    
     return (
       <div>
         <UserForm addNewUser={this.handleAddNewUser} />
