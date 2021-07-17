@@ -7,9 +7,7 @@ const User = ({ user, index }) => {
       <hr />
       <h4>Name:{user.name}</h4>
       <p>Email:{user.email}</p>
-      <p>Phone:{user.phone}</p>
-      <p>Address:{user.address}</p>
-      <p>Company:{user.company}</p>
+      <p>Gen:{user.gen}</p>
     </div>
   );
 };

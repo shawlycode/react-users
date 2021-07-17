@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
-import User from './User';
+import React from 'react'
+import User from './User'
 
- class UserList extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
-}
+const UserList = (users) => {
+    const UserList =users.map((user) =>{
+
+    
+
+    return (
+        <div>
+            
+        </div>
+    )
+};
 export default UserList;

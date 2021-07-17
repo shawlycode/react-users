@@ -6,7 +6,7 @@ class UserForm extends Component {
     this.state = {
       name: "",
       email: "",
-      phonenumber: "",
+      gen: "",
     };
   }
   handleChange = (e) => {
@@ -18,9 +18,7 @@ class UserForm extends Component {
     this.setState({
       name: "",
       email: "",
-      phone: "",
-      address: "",
-      company: "",
+      Gen: "",
     });
   };
   render() {
@@ -50,33 +48,12 @@ class UserForm extends Component {
               />
             </div>
             <div className="form-content">
-              <label htmlFor="Phone Number">Contact:</label>
+              <label htmlFor="Number">Gen:</label>
               <input
-                type="Phone Number"
-                name="Phonenumber"
-                placeholder="enter your phone number"
+                type="Number"
+                name="gen"
                 onChange={this.handleChange}
                 value={this.state.phone}
-              />
-            </div>
-            <div className="form-content">
-              <label htmlFor="address">Address:</label>
-              <input
-                type="text"
-                name="address"
-                placeholder="enter your street address"
-                onChange={this.handleChange}
-                value={this.state.address}
-              />
-            </div>
-            <div className="form-content">
-              <label htmlFor="company">Company:</label>
-              <input
-                type="text"
-                name="company"
-                placeholder="name of company"
-                onChange={this.handleChange}
-                value={this.state.company}
               />
             </div>
             <button>Add User</button>
